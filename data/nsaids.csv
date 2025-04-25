@@ -1,0 +1,23 @@
+Name,SMILES
+Salicylic Acid,C1=CC=C(C(=C1)C(=O)O)O
+Indomethacin,CC1=C(C2=C(N1C(=O)C3=CC=C(C=C3)Cl)C=CC(=C2)OC)CC(=O)O
+Diclofenac,C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl
+Ibuprofen,CC(C)CC1=CC=C(C=C1)C(C)C(=O)O
+Phenylbutazone,CCCCC1C(=O)N(N(C1=O)C2=CC=CC=C2)C3=CC=CC=C3
+Meloxicam,CC1=CN=C(S1)NC(=O)C2=C(C3=CC=CC=C3S(=O)(=O)N2C)O
+Celecoxib,CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F
+Oxyphenbutazone,CCCCC1C(=O)N(N(C1=O)C2=CC=C(C=C2)O)C3=CC=CC=C3
+Ketoprofen,CC(C1=CC(=CC=C1)C(=O)C2=CC=CC=C2)C(=O)O
+Naproxen,C[C@@H](C1=CC2=C(C=C1)C=C(C=C2)OC)C(=O)O
+Valdecoxib,CC1=C(C(=NO1)C2=CC=CC=C2)C3=CC=C(C=C3)S(=O)(=O)N
+Mefenamic Acid,CC1=C(C(=CC=C1)NC2=CC=CC=C2C(=O)O)C
+Oxaprozin,C1=CC=C(C=C1)C2=C(OC(=N2)CCC(=O)O)C3=CC=CC=C3
+Mesalamine,C1=CC(=C(C=C1N)C(=O)O)O
+Dexibuprofen,C[C@@H](C1=CC=C(C=C1)CC(C)C)C(=O)O
+Flurbiprofen,CC(C1=CC(=C(C=C1)C2=CC=CC=C2)F)C(=O)O
+Tolmetin,CC1=CC=C(C=C1)C(=O)C2=CC=C(N2C)CC(=O)O
+Etoricoxib,CC1=NC=C(C=C1)C2=C(C=C(C=N2)Cl)C3=CC=C(C=C3)S(=O)(=O)C
+Rofecoxib,CS(=O)(=O)C1=CC=C(C=C1)C2=C(C(=O)OC2)C3=CC=CC=C3
+Indoprofen,CC(C1=CC=C(C=C1)N2CC3=CC=CC=C3C2=O)C(=O)O
+Flufenamic Acid,C1=CC=C(C(=C1)C(=O)O)NC2=CC=CC(=C2)C(F)(F)F
+Nabumetone,CC(=O)CCC1=CC2=C(C=C1)C=C(C=C2)OC
