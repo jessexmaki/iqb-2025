@@ -2,12 +2,13 @@
 utility functions for the workshop.
 """
 
-def visualize_docked_poses(protein_file, 
-                             pose_file, 
-                             cognate_file=None, 
-                             animate=True,
-                             cognate_color=None,
-                             pose_color=None):
+def visualize_poses(protein_file, 
+                           pose_file, 
+                           cognate_file=None, 
+                           animate=True,
+                           cognate_color=None,
+                           pose_color=None,
+                           highlight_residues=None):
     """
     Creates a 3D visualization of a protein with multiple ligand poses from a single SDF file.
 
@@ -25,6 +26,8 @@ def visualize_docked_poses(protein_file,
         Color for cognate. Default is yellow.
     pose_color: str, optional
         Color for ligand poses. Default is green.
+    highlight_residues: list, optional
+        List of residue numbers to highlight with VDW representation
 
     Returns:
     --------
@@ -48,6 +51,12 @@ def visualize_docked_poses(protein_file,
 
     # Set protein style
     v.setStyle({'cartoon': {}, 'stick': {'radius': 0.1}})
+    
+    # Add VDW representation for highlighted residues if specified
+    if highlight_residues:
+        for res in highlight_residues:
+            v.addStyle({'model': 0, 'resi': str(res)}, 
+                       {'sphere': {'color': 'magenta', 'opacity': 0.7, 'scale': 0.7}})
 
     # Add cognate ligand if provided
     if cognate_file:
@@ -70,8 +79,14 @@ def visualize_docked_poses(protein_file,
         v.addModel(pose_content)
         v.setStyle({'model': model_offset + 1}, {'stick': {'colorscheme': f'{pose_color}Carbon'}})
 
-    # Set view
-    zoom_model = 1 if cognate_file else 0
+    # Set view - zoom to the correct structure
+    if cognate_file:
+        # Zoom to cognate if provided
+        zoom_model = 1
+    else:
+        # Zoom to docked poses if no cognate
+        zoom_model = model_offset + 1
+    
     v.zoomTo({'model': zoom_model})
     v.rotate(270)
 
